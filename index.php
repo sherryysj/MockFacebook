@@ -31,11 +31,20 @@
  </head>
 
 
- <body>
+ <body class="text-center">
+
+    <div class="mydiv">
+      <div>
+        <h1 class="h1 mb-2 fw-normal">Welcome to Mock Facebook</h1>
+        <h2 class="h2 mb-2 fw-normal">You have to sign in to see the contents of the website.</h2>
+        <h2 class="h2 mb-5 fw-normal">If you do not have an account, please click sign up to register one.</h2>
+        <h3 class="h3 mb-2 fw-normal">For demo purpose, you can use username: DemoUser, password: Demo to login. Or you can create an new account to test the function if you are willing to.</h2>
+      </div>
+
+
+    </div>
  <main class="form-signin">
-   <h1> Welcome to Mock Facebook</h1>
-   <a> You have to sign in to see the contents of the website. </a>
-   <a> If you do not have an account, please click sign up to register one. </a><br>
+
    <a> </a>
    <form>
 
