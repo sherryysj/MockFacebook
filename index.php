@@ -42,40 +42,42 @@
         <h3 class="h3 mb-5 fw-normal">Or you can create a new account to test the sign up function if you are willing to do so.</h3>
       </div>
 
-      <main class="form-signin">
+      <div>
+        <main class="form-signin">
 
-        <a> </a>
-        <form>
-
-          <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
-          <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
-          </div>
-
-          <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
-          </div>
-
-          <div class="checkbox mb-3">
-            <label>
-              <input type="checkbox" value="remember-me"> Remember me
-            </label>
-          </div>
-
-          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-
-        </form>
-
-        <form action="signup.php">
           <a> </a>
-          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
-        </form>
+          <form>
 
-      </main>
+            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
+            <div class="form-floating">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Email address</label>
+            </div>
+
+            <div class="form-floating">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Password</label>
+            </div>
+
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+            </div>
+
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+
+          </form>
+
+          <form action="signup.php">
+            <a> </a>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+          </form>
+
+        </main>
+      </div>
+      
     </div>
  
 </body>
