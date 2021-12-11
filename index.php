@@ -39,7 +39,7 @@
         <h2 class="h2 mb-2 fw-normal">You have to sign in to see the contents of the website.</h2>
         <h2 class="h2 mb-5 fw-normal">If you do not have an account, please click sign up to register one.</h2>
         <h3 class="h3 mb-2 fw-normal">For demo purpose, you can use Username: DemoUser, Password: Demo to login. </h3>
-        <h3 class="h3 mb-5 fw-normal">Or you can create a new account to test the sign up function if you are willing to so.</h3>
+        <h3 class="h3 mb-5 fw-normal">Or you can create a new account to test the sign up function if you are willing to do so.</h3>
       </div>
 
       <main class="form-signin">
