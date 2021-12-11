@@ -45,8 +45,7 @@
       <div>
         <main class="form-signin">
 
-          <a> </a>
-          <form>
+          <form class="mb-2">
 
             <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
@@ -71,13 +70,12 @@
           </form>
 
           <form action="signup.php">
-            <a> </a>
             <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
           </form>
 
         </main>
       </div>
-      
+
     </div>
  
 </body>
