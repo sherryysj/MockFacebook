@@ -1,12 +1,19 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 $inputEmail = $_POST["Email"];
 $inputPassword = $_POST["Password"];
 
-include_once("vendor/autoload.php");
+require_once("../vendor/autoload.php");
+
+phpinfo();
 
 $client = new MongoDB\Client("mongodb+srv://SherryDemo:SherryYang@sherrydemo.dabra.mongodb.net/MockFacebook?retryWrites=true&w=majority");  
-$collection = $client->Member;
-$document = $collection->findOne(['EMAIL' => $inputEmail]);
+$collection = $client->MockFacebook->Member;
+$member = $collection->findOne(['EMAIL' => $inputEmail]);
+
 
 $match = false;
 if (strcmp($member->PASSWORD, $inputPassword)) {
@@ -29,4 +36,6 @@ if ($match == true){
    header("refresh:4; url='index.php'");
 }
 
+
 ?>
+
