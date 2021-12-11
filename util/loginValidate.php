@@ -8,7 +8,7 @@ $inputPassword = $_POST["Password"];
 
 require_once("../vendor/autoload.php");
 
-phpinfo();
+//phpinfo();
 
 $client = new MongoDB\Client("mongodb+srv://SherryDemo:SherryYang@sherrydemo.dabra.mongodb.net/MockFacebook?retryWrites=true&w=majority");  
 $collection = $client->MockFacebook->Member;
