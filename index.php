@@ -45,7 +45,7 @@
       <div>
         <main class="form-signin">
 
-          <form class="mb-2">
+          <form class="mb-2" action="util/loginValidate.php" method="post">
 
             <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
