@@ -86,7 +86,7 @@ $gender = $_SESSION['userGender'];
       <div class="form-floating mb-5">
 
         <h4>Share your thoughs:</h4>
-        <form action="saveData\createPost.php" method="post">
+        <form action="shared\createPost.php" method="post">
           <textarea class="form-control mb-2 postInput" placeholder="What's your thought?" name="Post"></textarea>
           <input type="hidden" name="memberEmail" value="<?php echo $email; ?>">
           <button type="submit" class="btn btn-outline-secondary" style="float:right">Post</button>
@@ -100,12 +100,15 @@ $gender = $_SESSION['userGender'];
 
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 include_once("vendor/autoload.php");
 
-$client = new MongoDB\Client("mongodb://localhost:27017");  
-$collection = $client->DBAssignment->Post;
+$client = new MongoDB\Client("mongodb+srv://SherryDemo:SherryYang@sherrydemo.dabra.mongodb.net/MockFacebook?retryWrites=true&w=majority");  
+$collection = $client->MockFacebook->Post;
 
-$post = $collection->find(['email' => $email]);
+$post = $collection->find(['MEMBER_EMAIL' => $email]);
 
 $recentPostNum = 10;
 foreach ($post as $row) {
@@ -116,19 +119,19 @@ foreach ($post as $row) {
     echo $row['BODY'];
     $postID = $row['_id'];
 
-    echo '<form action="saveData\createReply.php" method="post">
+    echo '<form action="shared\createReply.php" method="post">
           <textarea class="ReplyInput" name="Reply" rows="4" cols="50"></textarea>
           <input type="hidden" name="memberEmail" value='."$email".'>
           <input type="hidden" name="parentPostID" value='."$postID".'>
           <input type="submit" value="Reply">
           </form>';
-    echo '<form action="saveData\createPostLike.php" method="post">
+    echo '<form action="shared\createPostLike.php" method="post">
           <input type="hidden" name="memberEmail" value='."$email".'>
           <input type="hidden" name="postID" value='."$postID".'>
           <input type="submit" value="Like">
           </form>';
     
-    $reply = $collection->find(['parentPostID' => $postID]);
+    $reply = $collection->find(['PARENTPOSTID' => $postID]);
     echo '&nbsp&nbsp <h6> Recent Replies </h6><br>'; 
     foreach ($reply as $row1) {
         echo '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp';
@@ -140,14 +143,14 @@ foreach ($post as $row) {
         echo $row1['BODY'];
         $replyID = $row1['_id'];
         echo '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp';
-        echo '<form action="saveData\createReply.php" method="post">
+        echo '<form action="shared\createReply.php" method="post">
               <textarea class="ReplyInput" name="Reply" rows="2" cols="30"></textarea>
               <input type="hidden" name="memberEmail" value='."$email".'>
               <input type="hidden" name="parentPostID" value='."$postID".'>
               <input type="hidden" name="parentReplyID" value='."$replyID".'>
               <input type="submit" value="Reply">
               </form>';
-        echo '<form action="saveData\createRespondLike.php" method="post">
+        echo '<form action="shared\createRespondLike.php" method="post">
               <input type="hidden" name="memberEmail" value='."$email".'>
               <input type="hidden" name="replyID" value='."$replyID".'>
               <input type="submit" value="Like">
