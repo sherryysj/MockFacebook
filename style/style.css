@@ -1,0 +1,18 @@
+.homePageMain {
+  width:70%;
+  max-width:1000px;
+  margin:auto;
+}
+
+.postInput {
+  height: 150px; 
+  resize:none; 
+  width: 100%;
+  border: 3px solid #89b9e9;
+}
+
+.postInput .ReplyInput {
+  height: 100px; 
+  width: 60%;
+}
+
